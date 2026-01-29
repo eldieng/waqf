@@ -1,0 +1,453 @@
+{
+    "slogan": "جمباتي لويي مينيي تي دو راڭ",
+    "common": {
+        "donate": "تبرع بوقف",
+        "learnMore": "اعرف المزيد",
+        "contact": "اتصل بنا",
+        "readMore": "اقرأ المزيد",
+        "viewAll": "عرض الكل",
+        "back": "رجوع",
+        "submit": "إرسال",
+        "loading": "جار التحميل...",
+        "error": "حدث خطأ",
+        "success": "نجاح",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد",
+        "save": "حفظ",
+        "delete": "حذف",
+        "edit": "تعديل",
+        "close": "إغلاق",
+        "search": "بحث",
+        "currency": "فرنك"
+    },
+    "nav": {
+        "home": "الرئيسية",
+        "about": "من نحن",
+        "projects": "المشاريع",
+        "donate": "تبرع",
+        "shop": "المتجر",
+        "cart": "السلة",
+        "news": "الأخبار",
+        "events": "الفعاليات",
+        "contact": "اتصل بنا",
+        "login": "تسجيل الدخول",
+        "register": "إنشاء حساب",
+        "dashboard": "حسابي",
+        "logout": "تسجيل الخروج"
+    },
+    "home": {
+        "hero": {
+            "title": "جمعية وقف و ليغيال دارا",
+            "brandLine1": "وقف و ليغيال",
+            "brandLine2": "دارا",
+            "subtitle": "معاً نبني مستقبلاً أفضل لأطفالنا",
+            "cta": "تبرع بوقف"
+        },
+        "badge": "جمعية خيرية منذ 2015",
+        "stats": {
+            "title": "تأثيرنا",
+            "donations": "التبرعات المجمعة",
+            "beneficiaries": "المستفيدون",
+            "projects": "المشاريع المنجزة",
+            "donors": "المتبرعون"
+        },
+        "urgentProjects": {
+            "title": "المشاريع العاجلة",
+            "subtitle": "مشاريع تحتاج دعمكم الفوري",
+            "urgent": "عاجل",
+            "viewAll": "عرض كل المشاريع",
+            "items": [
+                { "title": "دارا تييس", "goal": "15M" },
+                { "title": "مدرسة قرآنية طوبا", "goal": "25M" },
+                { "title": "ترميم المدينة", "goal": "8M" }
+            ]
+        },
+        "trust": {
+            "secure": "آمن",
+            "receipt": "إيصال",
+            "transparent": "شفاف"
+        },
+        "ctaSection": {
+            "title": "كل تبرع مهم",
+            "description": "كرمك يمكن أن يغيّر حياة طفل.",
+            "donateNow": "تبرع الآن"
+        },
+        "about": {
+            "title": "من نحن؟",
+            "description": "تعمل جمعية وقف و ليغيال دارا على تعليم ورعاية الأطفال المحتاجين من خلال مشاريع اجتماعية وتعليمية مستدامة."
+        },
+        "testimonials": {
+            "title": "شهادات",
+            "subtitle": "ما يقوله المستفيدون",
+            "items": [
+                {
+                    "name": "أمادو ديالو",
+                    "role": "ولي أمر",
+                    "text": "بفضل هذه الجمعية، استطاع ابني متابعة دراسته القرآنية."
+                },
+                {
+                    "name": "فاطو سو",
+                    "role": "متبرعة",
+                    "text": "أنا فخورة بالمساهمة في هذه القضية. الشفافية تطمئنني."
+                },
+                {
+                    "name": "إبراهيم با",
+                    "role": "مدير",
+                    "text": "دعم وقف دارا ساعد في ترميم مدرستنا."
+                }
+            ]
+        }
+    },
+    "about": {
+        "title": "من نحن",
+        "mission": {
+            "title": "مهمتنا",
+            "description": "توفير تعليم عالي الجودة ودعم اجتماعي لأطفال الدارات."
+        },
+        "vision": {
+            "title": "رؤيتنا",
+            "description": "عالم يحصل فيه كل طفل على التعليم والفرص."
+        },
+        "values": {
+            "title": "قيمنا",
+            "transparency": "الشفافية",
+            "solidarity": "التضامن",
+            "excellence": "التميز",
+            "respect": "الاحترام"
+        },
+        "waqf": {
+            "title": "ما هو الوقف؟",
+            "description": "الوقف هو صدقة جارية دائمة في الإسلام، تُخصص عوائدها للأعمال الخيرية."
+        },
+        "team": {
+            "title": "فريقنا",
+            "subtitle": "أشخاص ملتزمون بقضيتنا"
+        },
+        "transparency": {
+            "title": "الشفافية",
+            "description": "اطلع على تقاريرنا المالية واكتشف كيف تُستخدم تبرعاتكم.",
+            "downloadReport": "تحميل التقرير"
+        }
+    },
+    "projects": {
+        "title": "مشاريعنا",
+        "subtitle": "اكتشف المشاريع التي ندعمها",
+        "filter": {
+            "all": "الكل",
+            "urgent": "عاجل",
+            "active": "نشط",
+            "completed": "مكتمل"
+        },
+        "card": {
+            "raised": "تم جمع",
+            "goal": "الهدف",
+            "progress": "من الهدف",
+            "donors": "متبرع",
+            "support": "ادعم هذا المشروع",
+            "viewMore": "عرض المزيد"
+        },
+        "pagination": {
+            "previous": "السابق",
+            "next": "التالي",
+            "page": "صفحة {page} / {totalPages}"
+        },
+        "detail": {
+            "notFound": "المشروع غير موجود",
+            "collected": "تم جمع",
+            "goal": "الهدف",
+            "progress": "التقدم",
+            "description": "الوصف",
+            "gallery": "المعرض",
+            "updates": "التحديثات",
+            "donors": "المتبرعون"
+        }
+    },
+    "donate": {
+        "title": "تبرع الآن",
+        "subtitle": "كرمكم يغير حياة",
+        "chooseAmount": "اختر المبلغ",
+        "choosePayment": "اختر طريقة الدفع",
+        "yourInfo": "معلوماتك",
+        "forProject": "للمشروع: {title}",
+        "oneTime": "تبرع لمرة واحدة",
+        "monthly": "تبرع شهري",
+        "errors": {
+            "minAmount": "الحد الأدنى للمبلغ هو {amount} {currency}"
+        },
+        "actions": {
+            "continue": "متابعة",
+            "continueWithAmount": "متابعة - {amount} {currency}",
+            "processing": "جار المعالجة...",
+            "pay": "ادفع {amount} {currency}"
+        },
+        "summary": {
+            "amount": "المبلغ",
+            "payment": "الدفع"
+        },
+        "amount": {
+            "title": "اختر المبلغ",
+            "custom": "مبلغ مخصص",
+            "placeholder": "أدخل المبلغ"
+        },
+        "allocation": {
+            "title": "توزيع التبرع",
+            "general": "تبرع عام",
+            "project": "مشروع محدد"
+        },
+        "info": {
+            "title": "معلوماتك",
+            "anonymous": "تبرع مجهول",
+            "name": "الاسم الكامل",
+            "email": "البريد الإلكتروني",
+            "phone": "رقم الهاتف",
+            "message": "رسالة (اختياري)"
+        },
+        "payment": {
+            "title": "طريقة الدفع",
+            "wave": "Wave",
+            "orangeMoney": "Orange Money",
+            "freeMoney": "Free Money",
+            "card": "بطاقة بنكية"
+        },
+        "confirmation": {
+            "title": "شكراً لتبرعكم!",
+            "message": "كرمكم يصنع الفرق.",
+            "receipt": "سيتم إرسال إيصال إلى بريدكم الإلكتروني.",
+            "share": "شارك تبرعك"
+        }
+    },
+    "shop": {
+        "title": "المتجر التضامني",
+        "subtitle": "اشترِ تضامنياً، ادعم أعمالنا",
+        "addToCart": "أضف إلى السلة",
+        "infoBanner": {
+            "title": "اشترِ بتضامن وادعم التعليم",
+            "description": "كل عملية شراء تدعم مباشرة مشاريع الجمعية التعليمية. شكراً لدعمكم!"
+        },
+        "filter": {
+            "all": "الكل"
+        },
+        "empty": {
+            "title": "لا توجد منتجات متاحة",
+            "description": "عد قريباً لاكتشاف منتجاتنا"
+        },
+        "cart": {
+            "title": "سلتك",
+            "empty": "سلتك فارغة",
+            "subtotal": "المجموع الفرعي",
+            "shipping": "الشحن",
+            "total": "المجموع",
+            "checkout": "إتمام الطلب",
+            "backToShop": "عرض المتجر",
+            "size": "المقاس",
+            "clear": "إفراغ السلة",
+            "summary": "الملخص",
+            "footerNote": " 100% من الأرباح تذهب للمشاريع"
+        },
+        "checkout": {
+            "title": "إتمام الطلب",
+            "steps": {
+                "information": "المعلومات",
+                "payment": "الدفع"
+            },
+            "shippingInfoTitle": "معلومات الشحن",
+            "fields": {
+                "address": "العنوان",
+                "city": "المدينة"
+            },
+            "continueToPayment": "المتابعة إلى الدفع",
+            "paymentTitle": "طريقة الدفع",
+            "processing": "جار المعالجة...",
+            "pay": "ادفع {amount} {currency}",
+            "summaryTitle": "ملخص الطلب",
+            "empty": {
+                "title": "سلتك فارغة",
+                "description": "أضف منتجات قبل إتمام الطلب",
+                "backToShop": "عرض المتجر"
+            },
+            "success": {
+                "title": "تم تأكيد الطلب!",
+                "description": "شكراً لطلبك. ستتلقى رسالة تأكيد عبر البريد الإلكتروني مع تفاصيل التوصيل.",
+                "continueShopping": "متابعة التسوق",
+                "viewOrders": "عرض طلباتي"
+            }
+        },
+        "product": {
+            "description": "الوصف",
+            "quantity": "الكمية",
+            "inStock": "متوفر",
+            "outOfStock": "نفذ من المخزون",
+            "unknown": "منتج",
+            "backToShop": "العودة إلى المتجر",
+            "addedToCart": "تمت الإضافة إلى السلة!",
+            "addToCartWithTotal": "{total} {currency}"
+        }
+    },
+    "news": {
+        "title": "الأخبار",
+        "subtitle": "آخر أخبار الجمعية",
+        "untitled": "بدون عنوان",
+        "empty": {
+            "title": "لا توجد مقالات حالياً",
+            "description": "عد قريباً للاطلاع على آخر الأخبار"
+        },
+        "categories": {
+            "all": "الكل",
+            "events": "الفعاليات",
+            "projects": "المشاريع",
+            "association": "الحياة الجمعوية"
+        },
+        "share": "شارك هذا المقال"
+    },
+    "events": {
+        "title": "الفعاليات",
+        "subtitle": "شارك في فعالياتنا",
+        "upcoming": "القادمة",
+        "past": "السابقة",
+        "empty": {
+            "title": "لا توجد فعاليات حالياً",
+            "description": "عد قريباً لاكتشاف فعالياتنا القادمة"
+        },
+        "details": {
+            "date": "التاريخ",
+            "location": "المكان",
+            "register": "سجل"
+        }
+    },
+    "contact": {
+        "title": "اتصل بنا",
+        "subtitle": "هل لديك سؤال؟ لا تتردد في مراسلتنا",
+        "actions": {
+            "sendAnother": "إرسال رسالة أخرى"
+        },
+        "form": {
+            "name": "اسمك",
+            "email": "بريدك الإلكتروني",
+            "phone": "هاتفك",
+            "subject": "الموضوع",
+            "message": "رسالتك",
+            "submit": "إرسال الرسالة",
+            "loading": "جار الإرسال..."
+        },
+        "info": {
+            "address": "العنوان",
+            "email": "البريد الإلكتروني",
+            "phone": "الهاتف",
+            "hours": "ساعات العمل"
+        },
+        "success": "تم إرسال رسالتك بنجاح!",
+        "error": "حدث خطأ. يرجى المحاولة مرة أخرى."
+    },
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "subtitle": "سجّل الدخول إلى مساحة المتبرع",
+            "email": "البريد الإلكتروني أو الهاتف",
+            "password": "كلمة المرور",
+            "remember": "تذكرني",
+            "forgot": "نسيت كلمة المرور؟",
+            "submit": "دخول",
+            "loading": "جار تسجيل الدخول...",
+            "noAccount": "ليس لديك حساب؟",
+            "register": "سجل الآن",
+            "identifierPlaceholder": "البريد الإلكتروني أو رقم الهاتف",
+            "errors": {
+                "required": "يرجى ملء جميع الحقول",
+                "invalidCredentials": "بيانات الدخول غير صحيحة"
+            }
+        },
+        "register": {
+            "title": "إنشاء حساب",
+            "subtitle": "أنشئ حسابك لتتبع تبرعاتك",
+            "firstName": "الاسم الأول",
+            "lastName": "الاسم الأخير",
+            "email": "البريد الإلكتروني",
+            "phone": "الهاتف",
+            "password": "كلمة المرور",
+            "confirmPassword": "تأكيد كلمة المرور",
+            "submit": "تسجيل",
+            "loading": "جار الإنشاء...",
+            "hasAccount": "لديك حساب بالفعل؟",
+            "login": "تسجيل الدخول",
+            "errors": {
+                "emailOrPhoneRequired": "البريد الإلكتروني أو الهاتف مطلوب",
+                "passwordMismatch": "كلمتا المرور غير متطابقتين",
+                "passwordMinLength": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل"
+            }
+        },
+        "forgot": {
+            "title": "نسيت كلمة المرور",
+            "description": "أدخل بريدك الإلكتروني لتلقي رابط إعادة التعيين.",
+            "submit": "إرسال",
+            "success": "تم إرسال بريد إلكتروني إليك.",
+            "emailSentTitle": "تم إرسال البريد الإلكتروني!",
+            "backToLogin": "العودة لتسجيل الدخول",
+            "identifierLabel": "البريد الإلكتروني أو الهاتف",
+            "identifierPlaceholder": "your@email.com أو +221...",
+            "sending": "جار الإرسال..."
+        },
+        "reset": {
+            "title": "إعادة تعيين كلمة المرور",
+            "password": "كلمة المرور الجديدة",
+            "confirm": "تأكيد كلمة المرور",
+            "submit": "إعادة تعيين"
+        }
+    },
+    "dashboard": {
+        "title": "مساحة المتبرع",
+        "welcome": "مرحباً",
+        "greeting": "السلام عليكم، {name}",
+        "defaultName": "متبرع",
+        "subtitle": "مرحباً بك في مساحتك الشخصية للوقف.",
+        "actions": {
+            "newDonation": "تبرع من جديد"
+        },
+        "profile": {
+            "title": "ملفي الشخصي",
+            "phone": "الهاتف",
+            "notProvided": "غير متوفر",
+            "memberSince": "عضو منذ",
+            "defaultMemberSince": "يناير 2026",
+            "edit": "تعديل",
+            "changePassword": "تغيير كلمة المرور"
+        },
+        "stats": {
+            "totalDonations": "إجمالي التبرعات",
+            "donationCount": "عدد التبرعات",
+            "projectsSupported": "المشاريع المدعومة",
+            "monthlyDonation": "التبرع الشهري النشط"
+        },
+        "donations": {
+            "recentTitle": "آخر التبرعات",
+            "empty": "لم تقم بأي تبرع بعد.",
+            "startSupporting": "ابدأ دعم مشاريعنا",
+            "title": "تبرعاتي",
+            "history": "السجل",
+            "date": "التاريخ",
+            "amount": "المبلغ",
+            "project": "المشروع",
+            "status": "الحالة",
+            "receipt": "الإيصال"
+        },
+        "subscriptions": {
+            "title": "تبرعاتي الشهرية",
+            "active": "نشط",
+            "paused": "متوقف",
+            "cancel": "إلغاء"
+        }
+    },
+    "footer": {
+        "about": "من نحن",
+        "description": "تعمل جمعية وقف و ليغيال دارا على تعليم ورعاية الأطفال المحتاجين.",
+        "quickLinks": "روابط سريعة",
+        "contact": "اتصل بنا",
+        "newsletter": {
+            "title": "النشرة الإخبارية",
+            "description": "تلقى أخبارنا",
+            "placeholder": "بريدك الإلكتروني",
+            "submit": "اشتراك"
+        },
+        "social": "تابعنا",
+        "copyright": "© {year} وقف و ليغيال دارا. جميع الحقوق محفوظة."
+    }
+}

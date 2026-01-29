@@ -1,0 +1,455 @@
+{
+    "slogan": "Jëmbate Luy meññ te du Rag",
+    "common": {
+        "donate": "Faire un Waqf",
+        "learnMore": "En savoir plus",
+        "contact": "Nous contacter",
+        "readMore": "Lire la suite",
+        "viewAll": "Voir tout",
+        "back": "Retour",
+        "submit": "Envoyer",
+        "loading": "Chargement...",
+        "error": "Une erreur est survenue",
+        "success": "Succès",
+        "cancel": "Annuler",
+        "confirm": "Confirmer",
+        "save": "Enregistrer",
+        "delete": "Supprimer",
+        "edit": "Modifier",
+        "close": "Fermer",
+        "search": "Rechercher",
+        "currency": "FCFA"
+    },
+    "nav": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "donate": "Faire un don",
+        "shop": "Boutique",
+        "cart": "Panier",
+        "news": "Actualités",
+        "events": "Événements",
+        "contact": "Contact",
+        "login": "Connexion",
+        "register": "S'inscrire",
+        "dashboard": "Mon espace",
+        "logout": "Déconnexion"
+    },
+    "home": {
+        "hero": {
+            "title": "Association Waqf And Liggeyal Daara",
+            "brandLine1": "Waqf And Liggeyal",
+            "brandLine2": "Daara",
+            "subtitle": "Ensemble, construisons un avenir meilleur pour nos enfants",
+            "cta": "Faire un Waqf"
+        },
+        "badge": "Association caritative depuis 2015",
+        "stats": {
+            "title": "Notre impact",
+            "donations": "Dons collectés",
+            "beneficiaries": "Bénéficiaires",
+            "projects": "Projets réalisés",
+            "donors": "Donateurs"
+        },
+        "urgentProjects": {
+            "title": "Projets urgents",
+            "subtitle": "Des projets qui ont besoin de votre soutien immédiat",
+            "urgent": "Urgent",
+            "viewAll": "Voir tous les projets",
+            "items": [
+                { "title": "Daara de Thiès", "goal": "15M FCFA" },
+                { "title": "École Coranique Touba", "goal": "25M FCFA" },
+                { "title": "Rénovation Médina", "goal": "8M FCFA" }
+            ]
+        },
+        "trust": {
+            "secure": "Sécurisé",
+            "receipt": "Reçu fiscal",
+            "transparent": "Transparent"
+        },
+        "ctaSection": {
+            "title": "Chaque don compte",
+            "description": "Votre générosité peut transformer la vie d'un enfant.",
+            "donateNow": "Faire un don maintenant"
+        },
+        "about": {
+            "title": "Qui sommes-nous ?",
+            "description": "L'Association Waqf And Liggeyal Daara œuvre pour l'éducation et le bien-être des enfants défavorisés à travers des projets sociaux et éducatifs durables."
+        },
+        "testimonials": {
+            "title": "Témoignages",
+            "subtitle": "Ce que disent nos bénéficiaires",
+            "items": [
+                {
+                    "name": "Amadou Diallo",
+                    "role": "Parent",
+                    "text": "Grâce à cette association, mon fils a pu continuer ses études coraniques."
+                },
+                {
+                    "name": "Fatou Sow",
+                    "role": "Donatrice",
+                    "text": "Je suis fière de contribuer à cette belle cause. La transparence me rassure."
+                },
+                {
+                    "name": "Ibrahima Ba",
+                    "role": "Directeur",
+                    "text": "Le soutien de Waqf Daara a permis de rénover notre école."
+                }
+            ]
+        }
+    },
+    "about": {
+        "title": "À propos de nous",
+        "mission": {
+            "title": "Notre mission",
+            "description": "Offrir une éducation de qualité et un accompagnement social aux enfants des daaras."
+        },
+        "vision": {
+            "title": "Notre vision",
+            "description": "Un monde où chaque enfant a accès à l'éducation et aux opportunités."
+        },
+        "values": {
+            "title": "Nos valeurs",
+            "transparency": "Transparence",
+            "solidarity": "Solidarité",
+            "excellence": "Excellence",
+            "respect": "Respect"
+        },
+        "waqf": {
+            "title": "Qu'est-ce que le Waqf ?",
+            "description": "Le Waqf est une donation pieuse perpétuelle en Islam, dont les revenus sont consacrés à des œuvres de bienfaisance."
+        },
+        "team": {
+            "title": "Notre équipe",
+            "subtitle": "Des personnes dévouées à notre cause"
+        },
+        "transparency": {
+            "title": "Transparence",
+            "description": "Consultez nos rapports financiers et découvrez comment vos dons sont utilisés.",
+            "downloadReport": "Télécharger le rapport"
+        }
+    },
+    "projects": {
+        "title": "Nos projets",
+        "subtitle": "Découvrez les projets que nous soutenons",
+        "backToProjects": "Retour aux projets",
+        "about": "À propos du projet",
+        "filter": {
+            "all": "Tous",
+            "urgent": "Urgents",
+            "active": "En cours",
+            "completed": "Terminés"
+        },
+        "card": {
+            "raised": "Collectés",
+            "goal": "Objectif",
+            "progress": "de l'objectif atteint",
+            "donors": "donateurs",
+            "support": "Soutenir ce projet",
+            "viewMore": "Voir plus"
+        },
+        "pagination": {
+            "previous": "Précédent",
+            "next": "Suivant",
+            "page": "Page {page} / {totalPages}"
+        },
+        "detail": {
+            "notFound": "Projet non trouvé",
+            "collected": "collectés",
+            "goal": "objectif",
+            "progress": "Progression",
+            "description": "Description",
+            "gallery": "Galerie",
+            "updates": "Mises à jour",
+            "donors": "Donateurs"
+        }
+    },
+    "donate": {
+        "title": "Faire un don",
+        "subtitle": "Votre générosité change des vies",
+        "chooseAmount": "Choisissez un montant",
+        "choosePayment": "Choisissez un moyen de paiement",
+        "yourInfo": "Vos informations",
+        "forProject": "Pour le projet : {title}",
+        "oneTime": "Don ponctuel",
+        "monthly": "Don mensuel",
+        "errors": {
+            "minAmount": "Le montant minimum est de {amount} {currency}"
+        },
+        "actions": {
+            "continue": "Continuer",
+            "continueWithAmount": "Continuer - {amount} {currency}",
+            "processing": "Traitement...",
+            "pay": "Payer {amount} {currency}"
+        },
+        "summary": {
+            "amount": "Montant",
+            "payment": "Paiement"
+        },
+        "amount": {
+            "title": "Choisissez un montant",
+            "custom": "Montant personnalisé",
+            "placeholder": "Entrez un montant"
+        },
+        "allocation": {
+            "title": "Affectation du don",
+            "general": "Don général",
+            "project": "Projet spécifique"
+        },
+        "info": {
+            "title": "Vos informations",
+            "anonymous": "Faire un don anonyme",
+            "name": "Nom complet",
+            "email": "Adresse email",
+            "phone": "Numéro de téléphone",
+            "message": "Message (optionnel)"
+        },
+        "payment": {
+            "title": "Moyen de paiement",
+            "wave": "Wave",
+            "orangeMoney": "Orange Money",
+            "freeMoney": "Free Money",
+            "card": "Carte bancaire"
+        },
+        "confirmation": {
+            "title": "Merci pour votre don !",
+            "message": "Votre générosité fait la différence.",
+            "receipt": "Un reçu vous sera envoyé par email.",
+            "share": "Partager votre don"
+        }
+    },
+    "shop": {
+        "title": "Boutique solidaire",
+        "subtitle": "Achetez solidaire, soutenez nos actions",
+        "addToCart": "Ajouter au panier",
+        "infoBanner": {
+            "title": "Achetez solidaire, soutenez l'éducation",
+            "description": "Chaque achat contribue directement au financement des projets éducatifs de l'association. Merci pour votre soutien !"
+        },
+        "filter": {
+            "all": "Tous"
+        },
+        "empty": {
+            "title": "Aucun produit disponible",
+            "description": "Revenez bientôt pour découvrir nos produits"
+        },
+        "cart": {
+            "title": "Votre panier",
+            "empty": "Votre panier est vide",
+            "subtotal": "Sous-total",
+            "shipping": "Livraison",
+            "total": "Total",
+            "checkout": "Commander",
+            "backToShop": "Voir la boutique",
+            "size": "Taille",
+            "clear": "Vider le panier",
+            "summary": "Résumé",
+            "footerNote": " 100% des bénéfices reversés aux projets"
+        },
+        "checkout": {
+            "title": "Finaliser la commande",
+            "steps": {
+                "information": "Informations",
+                "payment": "Paiement"
+            },
+            "shippingInfoTitle": "Informations de livraison",
+            "fields": {
+                "address": "Adresse",
+                "city": "Ville"
+            },
+            "continueToPayment": "Continuer vers le paiement",
+            "paymentTitle": "Mode de paiement",
+            "processing": "Traitement...",
+            "pay": "Payer {amount} {currency}",
+            "summaryTitle": "Récapitulatif",
+            "empty": {
+                "title": "Votre panier est vide",
+                "description": "Ajoutez des produits avant de passer commande",
+                "backToShop": "Voir la boutique"
+            },
+            "success": {
+                "title": "Commande confirmée !",
+                "description": "Merci pour votre commande. Vous recevrez un email de confirmation avec les détails de livraison.",
+                "continueShopping": "Continuer les achats",
+                "viewOrders": "Voir mes commandes"
+            }
+        },
+        "product": {
+            "description": "Description",
+            "quantity": "Quantité",
+            "inStock": "En stock",
+            "outOfStock": "Rupture de stock",
+            "unknown": "Produit",
+            "backToShop": "Retour à la boutique",
+            "addedToCart": "Ajouté au panier !",
+            "addToCartWithTotal": "{total} {currency}"
+        }
+    },
+    "news": {
+        "title": "Actualités",
+        "subtitle": "Les dernières nouvelles de l'association",
+        "untitled": "Sans titre",
+        "empty": {
+            "title": "Aucun article pour le moment",
+            "description": "Revenez bientôt pour découvrir nos actualités"
+        },
+        "categories": {
+            "all": "Toutes",
+            "events": "Événements",
+            "projects": "Projets",
+            "association": "Vie associative"
+        },
+        "share": "Partager cet article"
+    },
+    "events": {
+        "title": "Événements",
+        "subtitle": "Participez à nos événements",
+        "upcoming": "À venir",
+        "past": "Passés",
+        "empty": {
+            "title": "Aucun événement pour le moment",
+            "description": "Revenez bientôt pour découvrir nos prochains événements"
+        },
+        "details": {
+            "date": "Date",
+            "location": "Lieu",
+            "register": "S'inscrire"
+        }
+    },
+    "contact": {
+        "title": "Nous contacter",
+        "subtitle": "Une question ? N'hésitez pas à nous écrire",
+        "actions": {
+            "sendAnother": "Envoyer un autre message"
+        },
+        "form": {
+            "name": "Votre nom",
+            "email": "Votre email",
+            "phone": "Votre téléphone",
+            "subject": "Sujet",
+            "message": "Votre message",
+            "submit": "Envoyer le message",
+            "loading": "Envoi..."
+        },
+        "info": {
+            "address": "Adresse",
+            "email": "Email",
+            "phone": "Téléphone",
+            "hours": "Horaires d'ouverture"
+        },
+        "success": "Votre message a été envoyé avec succès !",
+        "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "auth": {
+        "login": {
+            "title": "Connexion",
+            "subtitle": "Connectez-vous à votre espace donateur",
+            "email": "Email ou téléphone",
+            "password": "Mot de passe",
+            "remember": "Se souvenir de moi",
+            "forgot": "Mot de passe oublié ?",
+            "submit": "Se connecter",
+            "loading": "Connexion...",
+            "noAccount": "Pas encore de compte ?",
+            "register": "S'inscrire",
+            "identifierPlaceholder": "Email ou numéro de téléphone",
+            "errors": {
+                "required": "Veuillez remplir tous les champs",
+                "invalidCredentials": "Identifiants incorrects"
+            }
+        },
+        "register": {
+            "title": "Créer un compte",
+            "subtitle": "Créez votre compte pour suivre vos dons",
+            "firstName": "Prénom",
+            "lastName": "Nom",
+            "email": "Email",
+            "phone": "Téléphone",
+            "password": "Mot de passe",
+            "confirmPassword": "Confirmer le mot de passe",
+            "submit": "S'inscrire",
+            "loading": "Création...",
+            "hasAccount": "Déjà un compte ?",
+            "login": "Se connecter",
+            "errors": {
+                "emailOrPhoneRequired": "Email ou téléphone requis",
+                "passwordMismatch": "Les mots de passe ne correspondent pas",
+                "passwordMinLength": "Le mot de passe doit contenir au moins 8 caractères"
+            }
+        },
+        "forgot": {
+            "title": "Mot de passe oublié",
+            "description": "Entrez votre email pour recevoir un lien de réinitialisation.",
+            "submit": "Envoyer",
+            "success": "Un email vous a été envoyé.",
+            "emailSentTitle": "Email envoyé !",
+            "backToLogin": "Retour à la connexion",
+            "identifierLabel": "Email ou téléphone",
+            "identifierPlaceholder": "votre@email.com ou +221...",
+            "sending": "Envoi en cours..."
+        },
+        "reset": {
+            "title": "Réinitialiser le mot de passe",
+            "password": "Nouveau mot de passe",
+            "confirm": "Confirmer le mot de passe",
+            "submit": "Réinitialiser"
+        }
+    },
+    "dashboard": {
+        "title": "Mon espace donateur",
+        "welcome": "Bienvenue",
+        "greeting": "Salaam, {name}",
+        "defaultName": "Donateur",
+        "subtitle": "Bienvenue dans votre espace personnel Waqf.",
+        "actions": {
+            "newDonation": "Faire un nouveau don"
+        },
+        "profile": {
+            "title": "Mon profil",
+            "phone": "Téléphone",
+            "notProvided": "Non renseigné",
+            "memberSince": "Membre depuis",
+            "defaultMemberSince": "Janvier 2026",
+            "edit": "Modifier",
+            "changePassword": "Changer le mot de passe"
+        },
+        "stats": {
+            "totalDonations": "Total des dons",
+            "donationCount": "Nombre de dons",
+            "projectsSupported": "Projets soutenus",
+            "monthlyDonation": "Don mensuel actif"
+        },
+        "donations": {
+            "recentTitle": "Dons récents",
+            "empty": "Vous n'avez pas encore fait de don.",
+            "startSupporting": "Commencer à soutenir nos projets",
+            "title": "Mes dons",
+            "history": "Historique",
+            "date": "Date",
+            "amount": "Montant",
+            "project": "Projet",
+            "status": "Statut",
+            "receipt": "Reçu"
+        },
+        "subscriptions": {
+            "title": "Mes dons mensuels",
+            "active": "Actif",
+            "paused": "En pause",
+            "cancel": "Annuler"
+        }
+    },
+    "footer": {
+        "about": "À propos",
+        "description": "L'Association Waqf And Liggeyal Daara œuvre pour l'éducation et le bien-être des enfants défavorisés.",
+        "quickLinks": "Liens rapides",
+        "contact": "Contact",
+        "newsletter": {
+            "title": "Newsletter",
+            "description": "Recevez nos actualités",
+            "placeholder": "Votre email",
+            "submit": "S'abonner"
+        },
+        "social": "Suivez-nous",
+        "copyright": "© {year} Waqf And Liggeyal Daara. Tous droits réservés."
+    }
+}
