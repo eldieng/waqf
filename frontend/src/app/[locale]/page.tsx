@@ -122,17 +122,16 @@ export default function HomePage() {
                     <div className="max-w-3xl">
                         {/* Wolof text */}
                         <p className="text-emerald-300 text-lg md:text-xl font-medium mb-4 tracking-wide">
-                            NJËMBAT LUY MEÑÑ TE DU RAG
+                            {t('home.hero.wolof')}
                         </p>
 
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                            Votre Waqf aujourd&apos;hui,<br />
-                            <span className="text-emerald-400">leur espoir pour toujours.</span>
+                            {t('home.hero.mainTitle')}<br />
+                            <span className="text-emerald-400">{t('home.hero.mainTitleHighlight')}</span>
                         </h1>
 
                         <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl leading-relaxed">
-                            Participez à une charité perpétuelle. Nous construisons et soutenons les Daaras 
-                            au Sénégal pour offrir aux générations futures une éducation digne et durable.
+                            {t('home.hero.description')}
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4">
@@ -140,7 +139,7 @@ export default function HomePage() {
                                 href={`/${locale}/donate`} 
                                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-emerald-500 text-white font-bold rounded-full hover:bg-emerald-600 transition-all shadow-lg shadow-emerald-500/30 text-lg"
                             >
-                                Faire un don MAINTENANT
+                                {t('home.hero.donateNow')}
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -159,10 +158,10 @@ export default function HomePage() {
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-8">
                             <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                                Découvrez notre action
+                                {t('home.video.badge')}
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                                Regardez notre vidéo
+                                {t('home.video.title')}
                             </h2>
                         </div>
                         <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl">
@@ -201,7 +200,7 @@ export default function HomePage() {
                                     </div>
                                     <div>
                                         <div className="text-3xl font-bold text-emerald-600">95%</div>
-                                        <div className="text-sm text-slate-600">des dons utilisés directement</div>
+                                        <div className="text-sm text-slate-600">{t('home.mission.donationsUsed')}</div>
                                     </div>
                                 </div>
                             </div>
@@ -209,25 +208,22 @@ export default function HomePage() {
 
                         <div>
                             <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                                Don Perpétuel
+                                {t('home.mission.badge')}
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                                Notre mission
+                                {t('home.mission.title')}
                             </h2>
                             <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                                Au cœur de notre action se trouve le principe du <strong>Waqf</strong> : un investissement 
-                                caritatif dont les bénéfices ne s&apos;arrêtent jamais.
+                                {t('home.mission.description1')}
                             </p>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                Qu&apos;il s&apos;agisse de construire des salles de classe, de fournir de l&apos;eau potable 
-                                ou d&apos;assurer la santé des Talibés, nous transformons votre don unique en une 
-                                source continue de bienfaits pour la communauté.
+                                {t('home.mission.description2')}
                             </p>
                             <Link 
                                 href={`/${locale}/about`}
                                 className="inline-flex items-center gap-2 text-emerald-600 font-semibold text-lg hover:text-emerald-700 transition-colors"
                             >
-                                En savoir plus
+                                {t('home.mission.learnMore')}
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -247,10 +243,10 @@ export default function HomePage() {
                 <div className="container relative z-10">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Offrir de l&apos;aide et de l&apos;espoir aux enfants
+                            {t('home.stats.title')}
                         </h2>
                         <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
-                            Grâce à votre générosité, nous changeons des vies chaque jour
+                            {t('home.stats.subtitle')}
                         </p>
                     </div>
 
@@ -259,38 +255,37 @@ export default function HomePage() {
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                                 {loading ? '...' : formatAmount(stats.totalDonations)}
                             </div>
-                            <div className="text-emerald-100 text-lg">FCFA collectés</div>
+                            <div className="text-emerald-100 text-lg">{t('home.stats.donations')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                                 {loading ? '...' : stats.totalProjects}+
                             </div>
-                            <div className="text-emerald-100 text-lg">Projets réalisés</div>
+                            <div className="text-emerald-100 text-lg">{t('home.stats.projects')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                                 {loading ? '...' : stats.totalDonors}+
                             </div>
-                            <div className="text-emerald-100 text-lg">Donateurs actifs</div>
+                            <div className="text-emerald-100 text-lg">{t('home.stats.donors')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">
                                 500+
                             </div>
-                            <div className="text-emerald-100 text-lg">Enfants soutenus</div>
+                            <div className="text-emerald-100 text-lg">{t('home.stats.children')}</div>
                         </div>
                     </div>
 
                     <div className="text-center mt-12">
                         <p className="text-xl text-white mb-6">
-                            <strong>Changeons des vies !</strong> Donner, c&apos;est investir dans l&apos;avenir. 
-                            Même 1 000 FCFA peut faire la différence pour un enfant.
+                            {t('home.stats.ctaText')}
                         </p>
                         <Link 
                             href={`/${locale}/donate`}
                             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-600 font-bold rounded-full hover:bg-slate-100 transition-all text-lg"
                         >
-                            FAIRE UN DON
+                            {t('home.stats.donateBtn')}
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
@@ -332,7 +327,7 @@ export default function HomePage() {
                         </div>
                     ) : projects.length === 0 ? (
                         <div className="text-center py-12 text-slate-500">
-                            Aucun projet disponible pour le moment
+                            {t('home.urgentProjects.noProjects')}
                         </div>
                     ) : (
                         <div className="grid md:grid-cols-3 gap-6">
@@ -356,7 +351,7 @@ export default function HomePage() {
                                             )}
                                             {project.isUrgent && (
                                                 <span className="absolute top-4 left-4 px-3 py-1 bg-red-500 text-white text-xs font-semibold rounded-full">
-                                                    Urgent
+                                                    {t('home.urgentProjects.urgent')}
                                                 </span>
                                             )}
                                         </div>
@@ -379,9 +374,9 @@ export default function HomePage() {
                                                 </div>
                                             </div>
                                             <div className="flex items-center justify-between text-sm">
-                                                <span className="text-slate-400">{project.donorCount || 0} donateurs</span>
+                                                <span className="text-slate-400">{project.donorCount || 0} {t('home.urgentProjects.donors')}</span>
                                                 <span className="text-emerald-600 font-medium group-hover:translate-x-1 transition-transform">
-                                                    Soutenir →
+                                                    {t('home.urgentProjects.support')} →
                                                 </span>
                                             </div>
                                         </div>
@@ -400,10 +395,10 @@ export default function HomePage() {
                         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
                             <div>
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
-                                    Campagnes en cours
+                                    {t('home.campaigns.title')}
                                 </h2>
                                 <p className="text-slate-500">
-                                    Rejoignez nos campagnes de collecte et faites la différence
+                                    {t('home.campaigns.subtitle')}
                                 </p>
                             </div>
                         </div>
@@ -441,7 +436,7 @@ export default function HomePage() {
                                             href={`/${locale}/donate`}
                                             className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-emerald-600 font-semibold rounded-xl hover:bg-slate-100 transition-colors"
                                         >
-                                            Participer
+                                            {t('home.campaigns.participate')}
                                             <span>→</span>
                                         </Link>
                                     </div>
@@ -458,15 +453,13 @@ export default function HomePage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-4 block">
-                                À propos de nous
+                                {t('home.about.badge')}
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                                Une fondation dédiée au bien-être de la communauté
+                                {t('home.about.title')}
                             </h2>
                             <p className="text-slate-600 mb-6 leading-relaxed">
-                                Depuis notre création, nous œuvrons pour le développement durable et l&apos;éducation 
-                                à travers des projets de Waqf (dotation perpétuelle). Notre mission est de créer 
-                                un impact positif et durable dans la vie des communautés les plus vulnérables.
+                                {t('home.about.description')}
                             </p>
                             <div className="grid grid-cols-2 gap-6 mb-8">
                                 <div className="flex items-start gap-3">
@@ -474,8 +467,8 @@ export default function HomePage() {
                                         ✓
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-slate-900">Transparence</div>
-                                        <div className="text-sm text-slate-500">100% des dons tracés</div>
+                                        <div className="font-semibold text-slate-900">{t('home.about.transparency')}</div>
+                                        <div className="text-sm text-slate-500">{t('home.about.transparencyDesc')}</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -483,8 +476,8 @@ export default function HomePage() {
                                         ✓
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-slate-900">Impact durable</div>
-                                        <div className="text-sm text-slate-500">Projets pérennes</div>
+                                        <div className="font-semibold text-slate-900">{t('home.about.impact')}</div>
+                                        <div className="text-sm text-slate-500">{t('home.about.impactDesc')}</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -492,8 +485,8 @@ export default function HomePage() {
                                         ✓
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-slate-900">Proximité</div>
-                                        <div className="text-sm text-slate-500">Présence locale</div>
+                                        <div className="font-semibold text-slate-900">{t('home.about.proximity')}</div>
+                                        <div className="text-sm text-slate-500">{t('home.about.proximityDesc')}</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -501,8 +494,8 @@ export default function HomePage() {
                                         ✓
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-slate-900">Expertise</div>
-                                        <div className="text-sm text-slate-500">Équipe qualifiée</div>
+                                        <div className="font-semibold text-slate-900">{t('home.about.expertise')}</div>
+                                        <div className="text-sm text-slate-500">{t('home.about.expertiseDesc')}</div>
                                     </div>
                                 </div>
                             </div>
@@ -518,8 +511,8 @@ export default function HomePage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 to-transparent" />
                                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                                    <div className="text-2xl font-bold">Waqf Sénégal</div>
-                                    <div className="text-emerald-200">Ensemble, construisons l&apos;avenir</div>
+                                    <div className="text-2xl font-bold">{t('home.about.orgName')}</div>
+                                    <div className="text-emerald-200">{t('home.about.orgSlogan')}</div>
                                 </div>
                             </div>
                             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 border border-slate-100">
@@ -529,7 +522,7 @@ export default function HomePage() {
                                     </div>
                                     <div>
                                         <div className="text-2xl font-bold text-slate-900">10+</div>
-                                        <div className="text-sm text-slate-500">Années d&apos;expérience</div>
+                                        <div className="text-sm text-slate-500">{t('home.about.yearsExp')}</div>
                                     </div>
                                 </div>
                             </div>
@@ -545,17 +538,17 @@ export default function HomePage() {
                         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
                             <div>
                                 <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block">
-                                    Actualités
+                                    {t('home.news.badge')}
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                                    Dernières nouvelles
+                                    {t('home.news.title')}
                                 </h2>
                             </div>
                             <Link 
                                 href={`/${locale}/news`}
                                 className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center gap-2"
                             >
-                                Toutes les actualités
+                                {t('home.news.viewAll')}
                                 <span>→</span>
                             </Link>
                         </div>
@@ -584,7 +577,7 @@ export default function HomePage() {
                                         <div className="p-6">
                                             <div className="flex items-center gap-3 mb-3">
                                                 <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-medium rounded-full">
-                                                    Article
+                                                    {t('home.news.article')}
                                                 </span>
                                                 <span className="text-sm text-slate-400">{date}</span>
                                             </div>
@@ -610,24 +603,24 @@ export default function HomePage() {
                     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
                         <div>
                             <span className="text-emerald-600 font-semibold text-sm uppercase tracking-wider mb-2 block">
-                                Boutique solidaire
+                                {t('home.shop.badge')}
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                                Achetez utile, donnez du sens
+                                {t('home.shop.title')}
                             </h2>
                         </div>
                         <Link 
                             href={`/${locale}/shop`}
                             className="text-emerald-600 font-semibold hover:text-emerald-700 flex items-center gap-2"
                         >
-                            Voir la boutique
+                            {t('home.shop.viewAll')}
                             <span>→</span>
                         </Link>
                     </div>
 
                     {products.length > 0 ? (
-                        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-6">
-                            {products.slice(0, 6).map((product) => (
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                            {products.slice(0, 5).map((product) => (
                                 <Link 
                                     key={product.id}
                                     href={`/${locale}/shop/${product.slug}`}
@@ -690,31 +683,31 @@ export default function HomePage() {
                 <div className="container">
                     <div className="text-center mb-12">
                         <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                            Témoignages
+                            {t('home.testimonials.badge')}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Ils nous font confiance
+                            {t('home.testimonials.title')}
                         </h2>
                     </div>
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
                             {
-                                name: "Cheikh Anta Sow",
-                                role: "Donateur régulier",
-                                text: "Grâce à Waqf Sénégal, je sais que mes dons ont un impact réel et durable. La transparence de l'organisation me rassure.",
+                                name: t('home.testimonials.items.0.name'),
+                                role: t('home.testimonials.items.0.role'),
+                                text: t('home.testimonials.items.0.text'),
                                 avatar: "C"
                             },
                             {
-                                name: "Fatou Diallo",
-                                role: "Bénévole",
-                                text: "Participer aux projets de Waqf m'a permis de voir concrètement comment nous changeons la vie des enfants dans les Daaras.",
+                                name: t('home.testimonials.items.1.name'),
+                                role: t('home.testimonials.items.1.role'),
+                                text: t('home.testimonials.items.1.text'),
                                 avatar: "F"
                             },
                             {
-                                name: "Moussa Ndiaye",
-                                role: "Partenaire",
-                                text: "Notre collaboration avec Waqf Sénégal a été une expérience enrichissante. Leur professionnalisme est exemplaire.",
+                                name: t('home.testimonials.items.2.name'),
+                                role: t('home.testimonials.items.2.role'),
+                                text: t('home.testimonials.items.2.text'),
                                 avatar: "M"
                             }
                         ].map((testimonial, i) => (
@@ -746,24 +739,23 @@ export default function HomePage() {
                 <div className="container relative z-10">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                            Nous Sommes En Mission
+                            {t('home.cta.title')}
                         </h2>
                         <p className="text-xl text-emerald-100 mb-8 leading-relaxed">
-                            Rejoignez-nous dans cette noble cause. Chaque don, petit ou grand, 
-                            contribue à bâtir un avenir meilleur pour les générations futures.
+                            {t('home.cta.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link 
                                 href={`/${locale}/donate`} 
                                 className="px-10 py-4 bg-white text-emerald-700 font-bold rounded-full hover:bg-slate-100 transition-all text-lg shadow-xl"
                             >
-                                Faire un don maintenant
+                                {t('home.cta.donate')}
                             </Link>
                             <Link 
                                 href={`/${locale}/contact`} 
                                 className="px-10 py-4 bg-transparent text-white border-2 border-white rounded-full font-bold hover:bg-white/10 transition-all text-lg"
                             >
-                                Nous contacter
+                                {t('home.cta.contact')}
                             </Link>
                         </div>
                     </div>

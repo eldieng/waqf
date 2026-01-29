@@ -41,26 +41,110 @@
             "brandLine1": "Waqf And Liggeyal",
             "brandLine2": "Daara",
             "subtitle": "Together, let's build a better future for our children",
-            "cta": "Make a Waqf"
+            "cta": "Make a Waqf",
+            "wolof": "NJËMBAT LUY MEÑÑ TE DU RAG",
+            "mainTitle": "Your Waqf today,",
+            "mainTitleHighlight": "their hope forever.",
+            "description": "Participate in perpetual charity. We build and support Daaras in Senegal to offer future generations a dignified and sustainable education.",
+            "donateNow": "Donate NOW"
         },
         "badge": "Charitable association since 2015",
+        "video": {
+            "badge": "Discover our action",
+            "title": "Watch our video"
+        },
+        "mission": {
+            "badge": "Perpetual Donation",
+            "title": "Our mission",
+            "description1": "At the heart of our action is the principle of Waqf: a charitable investment whose benefits never stop.",
+            "description2": "Whether building classrooms, providing clean water, or ensuring the health of Talibés, we transform your single donation into a continuous source of benefits for the community.",
+            "learnMore": "Learn more",
+            "donationsUsed": "of donations used directly"
+        },
         "stats": {
-            "title": "Our impact",
-            "donations": "Donations raised",
+            "title": "Providing help and hope to children",
+            "subtitle": "Thanks to your generosity, we change lives every day",
+            "donations": "XOF raised",
             "beneficiaries": "Beneficiaries",
             "projects": "Projects completed",
-            "donors": "Donors"
+            "donors": "Active donors",
+            "children": "Children supported",
+            "ctaText": "Let's change lives! Giving is investing in the future. Even 1,000 XOF can make a difference for a child.",
+            "donateBtn": "DONATE"
         },
         "urgentProjects": {
             "title": "Urgent projects",
             "subtitle": "Projects that need your immediate support",
             "urgent": "Urgent",
             "viewAll": "View all projects",
+            "noProjects": "No projects available at the moment",
+            "donors": "donors",
+            "support": "Support",
             "items": [
                 { "title": "Daara of Thiès", "goal": "15M XOF" },
                 { "title": "Quran School Touba", "goal": "25M XOF" },
                 { "title": "Medina Renovation", "goal": "8M XOF" }
             ]
+        },
+        "campaigns": {
+            "title": "Ongoing campaigns",
+            "subtitle": "Join our fundraising campaigns and make a difference",
+            "participate": "Participate"
+        },
+        "about": {
+            "badge": "About us",
+            "title": "A foundation dedicated to community well-being",
+            "description": "Since our creation, we work for sustainable development and education through Waqf projects (perpetual endowment). Our mission is to create a positive and lasting impact in the lives of the most vulnerable communities.",
+            "transparency": "Transparency",
+            "transparencyDesc": "100% of donations tracked",
+            "impact": "Lasting impact",
+            "impactDesc": "Sustainable projects",
+            "proximity": "Proximity",
+            "proximityDesc": "Local presence",
+            "expertise": "Expertise",
+            "expertiseDesc": "Qualified team",
+            "orgName": "Waqf Senegal",
+            "orgSlogan": "Together, let's build the future",
+            "yearsExp": "Years of experience"
+        },
+        "news": {
+            "badge": "News",
+            "title": "Latest news",
+            "viewAll": "All news",
+            "article": "Article"
+        },
+        "shop": {
+            "badge": "Solidarity shop",
+            "title": "Buy useful, give meaning",
+            "viewAll": "View shop"
+        },
+        "testimonials": {
+            "badge": "Testimonials",
+            "title": "They trust us",
+            "subtitle": "What our beneficiaries say",
+            "items": [
+                {
+                    "name": "Cheikh Anta Sow",
+                    "role": "Regular donor",
+                    "text": "Thanks to Waqf Senegal, I know my donations have a real and lasting impact. The organization's transparency reassures me."
+                },
+                {
+                    "name": "Fatou Diallo",
+                    "role": "Volunteer",
+                    "text": "Participating in Waqf projects allowed me to see concretely how we change children's lives in Daaras."
+                },
+                {
+                    "name": "Moussa Ndiaye",
+                    "role": "Partner",
+                    "text": "Our collaboration with Waqf Senegal has been an enriching experience. Their professionalism is exemplary."
+                }
+            ]
+        },
+        "cta": {
+            "title": "We Are On A Mission",
+            "description": "Join us in this noble cause. Every donation, big or small, helps build a better future for future generations.",
+            "donate": "Donate now",
+            "contact": "Contact us"
         },
         "trust": {
             "secure": "Secure",
@@ -71,35 +155,97 @@
             "title": "Every donation counts",
             "description": "Your generosity can change a child's life.",
             "donateNow": "Donate now"
-        },
-        "about": {
-            "title": "Who are we?",
-            "description": "The Waqf And Liggeyal Daara Association works for the education and well-being of underprivileged children through sustainable social and educational projects."
-        },
-        "testimonials": {
-            "title": "Testimonials",
-            "subtitle": "What our beneficiaries say",
-            "items": [
-                {
-                    "name": "Amadou Diallo",
-                    "role": "Parent",
-                    "text": "Thanks to this association, my son was able to continue his Quranic studies."
-                },
-                {
-                    "name": "Fatou Sow",
-                    "role": "Donor",
-                    "text": "I'm proud to contribute to this great cause. Transparency reassures me."
-                },
-                {
-                    "name": "Ibrahima Ba",
-                    "role": "Director",
-                    "text": "The support from Waqf Daara helped renovate our school."
-                }
-            ]
         }
     },
     "about": {
         "title": "About us",
+        "hero": {
+            "badge": "About our organization",
+            "title": "Who are we?",
+            "description": "Waqf Senegal is an organization dedicated to supporting Daaras and educating children through the Islamic principle of Waqf (perpetual endowment).",
+            "years": "Years",
+            "children": "Children",
+            "projectsDone": "Projects"
+        },
+        "impact": {
+            "badge": "Our Impact",
+            "title": "Waqf: Solidarity in Action",
+            "description": "Discover how your contribution concretely transforms the daily lives of Talibés. Waqf is not just charity, it's a solid foundation for the future of our community.",
+            "donationsUsed": "of donations used",
+            "infrastructure": "Educational infrastructure renovation",
+            "infrastructureDesc": "Construction and modernization of Daaras",
+            "community": "Building Stronger Communities",
+            "communityDesc": "Strengthening social and solidarity bonds",
+            "sustainable": "Sustainable and perpetual investment",
+            "sustainableDesc": "Benefits that last forever",
+            "joinCta": "Join the community now"
+        },
+        "ways": {
+            "badge": "How to participate",
+            "title": "3 Ways to Build the Future",
+            "description": "Every gesture counts. Whether through financial investment, sponsorship or your time, you have the power to change lives sustainably.",
+            "sponsor": {
+                "badge": "Sponsorship",
+                "title": "Sponsor a Talibé",
+                "description": "Support a child in their educational journey. Your sponsorship covers their essential needs: education, health, food.",
+                "cta": "Learn more"
+            },
+            "waqf": {
+                "badge": "Donation",
+                "title": "Make a Waqf",
+                "description": "Invest in perpetual charity. Your Waqf generates continuous benefits for the community, generation after generation.",
+                "cta": "Make a donation"
+            },
+            "volunteer": {
+                "badge": "Volunteering",
+                "title": "Become a Volunteer",
+                "description": "Give your time and skills. Join our team of volunteers and actively participate in our field projects.",
+                "cta": "Join us"
+            }
+        },
+        "values": {
+            "badge": "Our Values",
+            "title": "What guides us",
+            "transparency": "Transparency",
+            "transparencyDesc": "Every donation is tracked and its use is communicated to donors.",
+            "solidarity": "Solidarity",
+            "solidarityDesc": "We believe in the power of community to create lasting change.",
+            "excellence": "Excellence",
+            "excellenceDesc": "We strive for excellence in every project we undertake.",
+            "respect": "Respect",
+            "respectDesc": "We respect the dignity of every person we serve."
+        },
+        "stats": {
+            "title": "Our Impact",
+            "subtitle": "Numbers that reflect your generosity",
+            "years": "Years of experience",
+            "projects": "Projects completed",
+            "children": "Children supported",
+            "regions": "Regions covered"
+        },
+        "team": {
+            "badge": "Our Team",
+            "title": "Dedicated people",
+            "subtitle": "A passionate team working every day to make a difference"
+        },
+        "transparency": {
+            "badge": "Transparency",
+            "title": "We are accountable",
+            "description": "Transparency is at the heart of our action. We regularly publish our financial and activity reports so you know exactly how your donations are used.",
+            "reports": "Public annual reports",
+            "audits": "Independent financial audits",
+            "tracking": "Real-time project tracking",
+            "downloadReport": "Download annual report",
+            "donationsToProjects": "of donations go directly to projects",
+            "projectsLabel": "Projects",
+            "adminLabel": "Administration"
+        },
+        "cta": {
+            "title": "Join our mission",
+            "description": "Together, we can offer a better future to the children of Senegal.",
+            "donate": "Make a donation",
+            "volunteer": "Become a volunteer"
+        },
         "mission": {
             "title": "Our mission",
             "description": "Provide quality education and social support to children in daaras."
@@ -108,25 +254,9 @@
             "title": "Our vision",
             "description": "A world where every child has access to education and opportunities."
         },
-        "values": {
-            "title": "Our values",
-            "transparency": "Transparency",
-            "solidarity": "Solidarity",
-            "excellence": "Excellence",
-            "respect": "Respect"
-        },
         "waqf": {
             "title": "What is Waqf?",
             "description": "Waqf is a perpetual pious donation in Islam, the revenues of which are dedicated to charitable works."
-        },
-        "team": {
-            "title": "Our team",
-            "subtitle": "People dedicated to our cause"
-        },
-        "transparency": {
-            "title": "Transparency",
-            "description": "Check our financial reports and see how your donations are used.",
-            "downloadReport": "Download report"
         }
     },
     "projects": {

@@ -1,7 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 export default function AboutPage() {
+    const t = useTranslations('about');
+    const params = useParams();
+
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section with Video */}
@@ -11,29 +18,28 @@ export default function AboutPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
                             <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm font-semibold mb-6">
-                                À propos de notre organisation
+                                {t('hero.badge')}
                             </span>
                             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                                Qui sommes-nous ?
+                                {t('hero.title')}
                             </h1>
                             <p className="text-xl text-slate-300 leading-relaxed mb-8">
-                                Waqf Sénégal est une organisation dédiée au soutien des Daaras et à l&apos;éducation 
-                                des enfants à travers le principe islamique du Waqf (dotation perpétuelle).
+                                {t('hero.description')}
                             </p>
                             <div className="flex items-center gap-4">
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-emerald-400">10+</div>
-                                    <div className="text-sm text-slate-400">Années</div>
+                                    <div className="text-sm text-slate-400">{t('hero.years')}</div>
                                 </div>
                                 <div className="w-px h-12 bg-slate-700" />
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-emerald-400">500+</div>
-                                    <div className="text-sm text-slate-400">Enfants</div>
+                                    <div className="text-sm text-slate-400">{t('hero.children')}</div>
                                 </div>
                                 <div className="w-px h-12 bg-slate-700" />
                                 <div className="text-center">
                                     <div className="text-4xl font-bold text-emerald-400">50+</div>
-                                    <div className="text-sm text-slate-400">Projets</div>
+                                    <div className="text-sm text-slate-400">{t('hero.projectsDone')}</div>
                                 </div>
                             </div>
                         </div>
@@ -70,20 +76,18 @@ export default function AboutPage() {
                             {/* Floating stats card */}
                             <div className="absolute -bottom-6 -right-6 bg-emerald-500 text-white rounded-2xl p-6 shadow-xl">
                                 <div className="text-4xl font-bold">95%</div>
-                                <div className="text-sm">des dons utilisés</div>
+                                <div className="text-sm">{t('impact.donationsUsed')}</div>
                             </div>
                         </div>
                         <div>
                             <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                                Notre Impact
+                                {t('impact.badge')}
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                                Le Waqf : Une Solidarité en Action
+                                {t('impact.title')}
                             </h2>
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
-                                Découvrez comment votre contribution transforme concrètement le quotidien des Talibés. 
-                                Le Waqf n&apos;est pas une simple aumône, c&apos;est une fondation solide pour l&apos;avenir 
-                                de notre communauté.
+                                {t('impact.description')}
                             </p>
                             
                             <div className="space-y-4 mb-8">
@@ -92,8 +96,8 @@ export default function AboutPage() {
                                         <span className="text-2xl">🏫</span>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900">Rénovation d&apos;infrastructures éducatives</h3>
-                                        <p className="text-sm text-slate-500">Construction et modernisation des Daaras</p>
+                                        <h3 className="font-bold text-slate-900">{t('impact.infrastructure')}</h3>
+                                        <p className="text-sm text-slate-500">{t('impact.infrastructureDesc')}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl">
@@ -101,8 +105,8 @@ export default function AboutPage() {
                                         <span className="text-2xl">🤝</span>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900">Construit Des Communautés Plus Fortes</h3>
-                                        <p className="text-sm text-slate-500">Renforcement des liens sociaux et solidaires</p>
+                                        <h3 className="font-bold text-slate-900">{t('impact.community')}</h3>
+                                        <p className="text-sm text-slate-500">{t('impact.communityDesc')}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl">
@@ -110,17 +114,17 @@ export default function AboutPage() {
                                         <span className="text-2xl">♾️</span>
                                     </div>
                                     <div>
-                                        <h3 className="font-bold text-slate-900">Investissement durable et perpétuel</h3>
-                                        <p className="text-sm text-slate-500">Des bénéfices qui durent pour toujours</p>
+                                        <h3 className="font-bold text-slate-900">{t('impact.sustainable')}</h3>
+                                        <p className="text-sm text-slate-500">{t('impact.sustainableDesc')}</p>
                                     </div>
                                 </div>
                             </div>
 
                             <Link 
-                                href="/fr/donate"
+                                href={`/${params.locale}/donate`}
                                 className="inline-flex items-center gap-2 px-8 py-4 bg-emerald-500 text-white font-bold rounded-full hover:bg-emerald-600 transition-colors"
                             >
-                                Rejoignez la communauté maintenant
+                                {t('impact.joinCta')}
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
@@ -135,14 +139,13 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                            Comment participer
+                            {t('ways.badge')}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            3 Façons de Bâtir l&apos;Avenir
+                            {t('ways.title')}
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Chaque geste compte. Que ce soit par un investissement financier, un parrainage 
-                            ou votre temps, vous avez le pouvoir de changer des vies durablement.
+                            {t('ways.description')}
                         </p>
                     </div>
 
@@ -151,28 +154,27 @@ export default function AboutPage() {
                             <div className="h-48 relative overflow-hidden">
                                 <Image
                                     src="/img/parrainer-un-talibe.jpg"
-                                    alt="Parrainer un Talibé"
+                                    alt={t('ways.sponsor.title')}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/60 to-transparent" />
                                 <div className="absolute bottom-4 left-4">
                                     <span className="px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-sm">
-                                        Parrainage
+                                        {t('ways.sponsor.badge')}
                                     </span>
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Parrainer un Talibé</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">{t('ways.sponsor.title')}</h3>
                                 <p className="text-slate-600 mb-6">
-                                    Accompagnez un enfant dans son parcours éducatif. Votre parrainage couvre 
-                                    ses besoins essentiels : éducation, santé, alimentation.
+                                    {t('ways.sponsor.description')}
                                 </p>
                                 <Link 
-                                    href="/fr/donate"
+                                    href={`/${params.locale}/donate`}
                                     className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700"
                                 >
-                                    En savoir plus
+                                    {t('ways.sponsor.cta')}
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
@@ -184,28 +186,27 @@ export default function AboutPage() {
                             <div className="h-48 relative overflow-hidden">
                                 <Image
                                     src="/img/faire-un-waqf.webp"
-                                    alt="Faire un Waqf"
+                                    alt={t('ways.waqf.title')}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent" />
                                 <div className="absolute bottom-4 left-4">
                                     <span className="px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-sm">
-                                        Don
+                                        {t('ways.waqf.badge')}
                                     </span>
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Faire un Waqf</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">{t('ways.waqf.title')}</h3>
                                 <p className="text-slate-600 mb-6">
-                                    Investissez dans une charité perpétuelle. Votre Waqf génère des bénéfices 
-                                    continus pour la communauté, génération après génération.
+                                    {t('ways.waqf.description')}
                                 </p>
                                 <Link 
-                                    href="/fr/donate"
+                                    href={`/${params.locale}/donate`}
                                     className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700"
                                 >
-                                    Faire un don
+                                    {t('ways.waqf.cta')}
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
@@ -217,28 +218,27 @@ export default function AboutPage() {
                             <div className="h-48 relative overflow-hidden">
                                 <Image
                                     src="/img/devenir-benevole.webp"
-                                    alt="Devenir Bénévole"
+                                    alt={t('ways.volunteer.title')}
                                     fill
                                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-orange-900/60 to-transparent" />
                                 <div className="absolute bottom-4 left-4">
                                     <span className="px-3 py-1 bg-white/20 text-white text-sm font-medium rounded-full backdrop-blur-sm">
-                                        Bénévolat
+                                        {t('ways.volunteer.badge')}
                                     </span>
                                 </div>
                             </div>
                             <div className="p-8">
-                                <h3 className="text-2xl font-bold text-slate-900 mb-4">Devenir Bénévole</h3>
+                                <h3 className="text-2xl font-bold text-slate-900 mb-4">{t('ways.volunteer.title')}</h3>
                                 <p className="text-slate-600 mb-6">
-                                    Donnez de votre temps et de vos compétences. Rejoignez notre équipe 
-                                    de bénévoles et participez activement à nos projets sur le terrain.
+                                    {t('ways.volunteer.description')}
                                 </p>
                                 <Link 
-                                    href="/fr/contact"
+                                    href={`/${params.locale}/contact`}
                                     className="inline-flex items-center gap-2 text-emerald-600 font-semibold hover:text-emerald-700"
                                 >
-                                    Nous rejoindre
+                                    {t('ways.volunteer.cta')}
                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
@@ -254,10 +254,10 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                            Nos Valeurs
+                            {t('values.badge')}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Ce qui nous guide
+                            {t('values.title')}
                         </h2>
                     </div>
 
@@ -265,23 +265,23 @@ export default function AboutPage() {
                         {[
                             { 
                                 icon: '🤝', 
-                                title: 'Transparence', 
-                                desc: 'Chaque don est tracé et son utilisation est communiquée aux donateurs.' 
+                                title: t('values.transparency'), 
+                                desc: t('values.transparencyDesc') 
                             },
                             { 
                                 icon: '❤️', 
-                                title: 'Solidarité', 
-                                desc: 'Nous croyons en la force de la communauté pour créer un changement durable.' 
+                                title: t('values.solidarity'), 
+                                desc: t('values.solidarityDesc') 
                             },
                             { 
                                 icon: '⭐', 
-                                title: 'Excellence', 
-                                desc: 'Nous visons l\'excellence dans chaque projet que nous entreprenons.' 
+                                title: t('values.excellence'), 
+                                desc: t('values.excellenceDesc') 
                             },
                             { 
                                 icon: '🙏', 
-                                title: 'Respect', 
-                                desc: 'Nous respectons la dignité de chaque personne que nous servons.' 
+                                title: t('values.respect'), 
+                                desc: t('values.respectDesc') 
                             },
                         ].map((value, i) => (
                             <div key={i} className="text-center group">
@@ -301,29 +301,29 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Notre Impact
+                            {t('stats.title')}
                         </h2>
                         <p className="text-emerald-100 text-lg">
-                            Des chiffres qui témoignent de votre générosité
+                            {t('stats.subtitle')}
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-8">
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">10+</div>
-                            <div className="text-emerald-100 text-lg">Années d&apos;expérience</div>
+                            <div className="text-emerald-100 text-lg">{t('stats.years')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">50+</div>
-                            <div className="text-emerald-100 text-lg">Projets réalisés</div>
+                            <div className="text-emerald-100 text-lg">{t('stats.projects')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">500+</div>
-                            <div className="text-emerald-100 text-lg">Enfants soutenus</div>
+                            <div className="text-emerald-100 text-lg">{t('stats.children')}</div>
                         </div>
                         <div className="text-center">
                             <div className="text-5xl md:text-6xl font-bold text-white mb-2">15</div>
-                            <div className="text-emerald-100 text-lg">Régions couvertes</div>
+                            <div className="text-emerald-100 text-lg">{t('stats.regions')}</div>
                         </div>
                     </div>
                 </div>
@@ -334,13 +334,13 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="text-center mb-16">
                         <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                            Notre Équipe
+                            {t('team.badge')}
                         </span>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                            Des personnes dévouées
+                            {t('team.title')}
                         </h2>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-                            Une équipe passionnée qui travaille chaque jour pour faire la différence
+                            {t('team.subtitle')}
                         </p>
                     </div>
 
@@ -370,44 +370,42 @@ export default function AboutPage() {
                             <div className="grid md:grid-cols-2 gap-10 items-center">
                                 <div>
                                     <span className="inline-block px-4 py-2 bg-emerald-100 text-emerald-700 rounded-full text-sm font-semibold mb-4">
-                                        Transparence
+                                        {t('transparency.badge')}
                                     </span>
                                     <h2 className="text-3xl font-bold text-slate-900 mb-4">
-                                        Nous rendons des comptes
+                                        {t('transparency.title')}
                                     </h2>
                                     <p className="text-slate-600 mb-6 leading-relaxed">
-                                        La transparence est au cœur de notre action. Nous publions régulièrement 
-                                        nos rapports financiers et d&apos;activité pour que vous sachiez exactement 
-                                        comment vos dons sont utilisés.
+                                        {t('transparency.description')}
                                     </p>
                                     <div className="space-y-3 mb-6">
                                         <div className="flex items-center gap-3">
                                             <span className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
-                                            <span className="text-slate-700">Rapports annuels publics</span>
+                                            <span className="text-slate-700">{t('transparency.reports')}</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <span className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
-                                            <span className="text-slate-700">Audits financiers indépendants</span>
+                                            <span className="text-slate-700">{t('transparency.audits')}</span>
                                         </div>
                                         <div className="flex items-center gap-3">
                                             <span className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600">✓</span>
-                                            <span className="text-slate-700">Suivi en temps réel des projets</span>
+                                            <span className="text-slate-700">{t('transparency.tracking')}</span>
                                         </div>
                                     </div>
                                     <button className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors">
-                                        Télécharger le rapport annuel
+                                        {t('transparency.downloadReport')}
                                     </button>
                                 </div>
                                 <div className="relative">
                                     <div className="bg-emerald-50 rounded-2xl p-8">
                                         <div className="text-center">
                                             <div className="text-6xl font-bold text-emerald-600 mb-2">95%</div>
-                                            <div className="text-slate-600">des dons vont directement aux projets</div>
+                                            <div className="text-slate-600">{t('transparency.donationsToProjects')}</div>
                                         </div>
                                         <div className="mt-8 space-y-4">
                                             <div>
                                                 <div className="flex justify-between text-sm mb-1">
-                                                    <span className="text-slate-600">Projets</span>
+                                                    <span className="text-slate-600">{t('transparency.projectsLabel')}</span>
                                                     <span className="font-semibold text-slate-900">95%</span>
                                                 </div>
                                                 <div className="h-3 bg-slate-200 rounded-full overflow-hidden">
@@ -416,7 +414,7 @@ export default function AboutPage() {
                                             </div>
                                             <div>
                                                 <div className="flex justify-between text-sm mb-1">
-                                                    <span className="text-slate-600">Administration</span>
+                                                    <span className="text-slate-600">{t('transparency.adminLabel')}</span>
                                                     <span className="font-semibold text-slate-900">5%</span>
                                                 </div>
                                                 <div className="h-3 bg-slate-200 rounded-full overflow-hidden">
@@ -437,23 +435,23 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="max-w-3xl mx-auto text-center">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                            Rejoignez notre mission
+                            {t('cta.title')}
                         </h2>
                         <p className="text-xl text-emerald-100 mb-8">
-                            Ensemble, nous pouvons offrir un avenir meilleur aux enfants du Sénégal.
+                            {t('cta.description')}
                         </p>
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                             <Link 
-                                href="/fr/donate" 
+                                href={`/${params.locale}/donate`} 
                                 className="px-10 py-4 bg-white text-emerald-700 font-bold rounded-full hover:bg-slate-100 transition-all text-lg"
                             >
-                                Faire un don
+                                {t('cta.donate')}
                             </Link>
                             <Link 
-                                href="/fr/contact" 
+                                href={`/${params.locale}/contact`} 
                                 className="px-10 py-4 bg-transparent text-white border-2 border-white rounded-full font-bold hover:bg-white/10 transition-all text-lg"
                             >
-                                Devenir bénévole
+                                {t('cta.volunteer')}
                             </Link>
                         </div>
                     </div>

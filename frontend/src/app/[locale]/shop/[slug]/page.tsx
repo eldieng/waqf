@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { productsApi } from '@/lib/services';
+import { useCart } from '@/lib/cart-context';
 
 interface ProductTranslation {
     language: string;
@@ -33,7 +34,9 @@ export default function ProductDetailPage() {
     const [loading, setLoading] = useState(true);
     const [quantity, setQuantity] = useState(1);
     const [addedToCart, setAddedToCart] = useState(false);
-
+    
+    const { addItem } = useCart();
+    const router = useRouter();
     const currency = t('common.currency');
 
     useEffect(() => {
@@ -61,8 +64,21 @@ export default function ProductDetailPage() {
     const price = product ? Number(product.price) : 0;
 
     const handleAddToCart = () => {
+        if (!product) return;
+        
+        const trans = getTranslation();
+        addItem({
+            id: product.id,
+            name: trans.name,
+            price: Number(product.price),
+            quantity: quantity,
+        });
+        
         setAddedToCart(true);
-        setTimeout(() => setAddedToCart(false), 2000);
+        setTimeout(() => {
+            setAddedToCart(false);
+            router.push(`/${locale}/shop/cart`);
+        }, 1000);
     };
 
     if (loading) {
