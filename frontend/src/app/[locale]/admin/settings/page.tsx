@@ -5,8 +5,9 @@ import { useState } from 'react';
 export default function AdminSettingsPage() {
     const [settings, setSettings] = useState({
         siteName: 'Waqf And Liggeyal Daara',
-        siteEmail: 'contact@waqf-daara.org',
-        sitePhone: '+221 77 000 00 00',
+        siteEmail: 'contact@waqfald.com',
+        sitePhone: '+221 77 528 13 13',
+        siteAddress: 'Liberté 6, Dakar, Sénégal',
         currency: 'XOF',
         minDonation: 1000,
         allowAnonymousDonations: true,
@@ -26,6 +27,13 @@ export default function AdminSettingsPage() {
             <div className="mb-8">
                 <h1 className="text-2xl font-semibold text-neutral-900">Paramètres</h1>
                 <p className="text-neutral-500">Configuration générale de la plateforme</p>
+            </div>
+
+            <div className="mb-6 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                <p className="text-amber-800 text-sm">
+                    ⚠️ <strong>Note:</strong> Les paramètres sont actuellement en lecture seule. 
+                    La sauvegarde dynamique sera disponible dans une prochaine mise à jour.
+                </p>
             </div>
 
             <div className="space-y-6">
