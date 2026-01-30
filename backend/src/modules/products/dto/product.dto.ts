@@ -50,6 +50,10 @@ export class CreateProductDto {
   isActive?: boolean;
 
   @IsOptional()
+  @IsBoolean()
+  isFeatured?: boolean;
+
+  @IsOptional()
   @IsArray()
   images?: string[];
 

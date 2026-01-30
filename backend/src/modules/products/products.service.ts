@@ -30,6 +30,7 @@ export class ProductsService {
         comparePrice: dto.comparePrice,
         stock: dto.stock ?? 0,
         isActive: dto.isActive ?? true,
+        isFeatured: dto.isFeatured ?? false,
         images: dto.images || [],
         translations: { create: dto.translations },
         categories: dto.categoryIds
