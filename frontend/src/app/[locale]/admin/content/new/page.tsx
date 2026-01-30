@@ -23,7 +23,7 @@ export default function NewContentPage() {
     const [formData, setFormData] = useState({
         slug: '',
         type: 'ARTICLE',
-        isPublished: false,
+        isPublished: true,
         featuredImage: '',
         translations: {
             fr: { title: '', body: '', excerpt: '' },
