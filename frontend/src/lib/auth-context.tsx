@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import { api } from './api';
 
 interface User {
@@ -30,11 +30,35 @@ export function useAuth() {
     return context;
 }
 
+// Decode JWT token to get user info
+function decodeToken(token: string): User | null {
+    try {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(
+            atob(base64)
+                .split('')
+                .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))
+                .join('')
+        );
+        const payload = JSON.parse(jsonPayload);
+        return {
+            id: payload.sub || payload.id,
+            email: payload.email || '',
+            firstName: payload.firstName,
+            lastName: payload.lastName,
+            role: payload.role || 'USER',
+        };
+    } catch {
+        return null;
+    }
+}
+
 export function AuthProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(true);
 
-    const checkAuth = async () => {
+    const checkAuth = useCallback(async () => {
         try {
             const token = localStorage.getItem('accessToken');
             if (!token) {
@@ -43,6 +67,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                 return;
             }
 
+            // First try to decode token locally
+            const decodedUser = decodeToken(token);
+            if (decodedUser) {
+                setUser(decodedUser);
+                setIsLoading(false);
+                return;
+            }
+
+            // Fallback to API call
             const { data } = await api.get('/auth/me');
             setUser(data);
         } catch {
@@ -52,11 +85,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         } finally {
             setIsLoading(false);
         }
-    };
+    }, []);
 
     useEffect(() => {
         checkAuth();
-    }, []);
+    }, [checkAuth]);
 
     const login = async (email: string, password: string) => {
         const { data } = await api.post('/auth/login', { email, password });

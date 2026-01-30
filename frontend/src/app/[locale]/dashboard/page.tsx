@@ -11,6 +11,7 @@ type DonorProfile = {
     lastName?: string;
     email?: string;
     phone?: string;
+    role?: string;
     createdAt?: string;
 };
 
@@ -71,6 +72,17 @@ export default function DonorDashboard() {
                     <p className="text-neutral-500">{t('dashboard.subtitle')}</p>
                 </div>
                 <div className="flex items-center gap-4">
+                    {(profile?.role === 'ADMIN' || profile?.role === 'MANAGER') && (
+                        <Link 
+                            href={`/${locale}/admin`} 
+                            className="px-6 py-3 bg-slate-800 text-white font-semibold rounded-xl hover:bg-slate-900 transition-colors flex items-center gap-2"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                            </svg>
+                            Administration
+                        </Link>
+                    )}
                     <Link href={`/${locale}/donate`} className="btn-primary">
                         {t('dashboard.actions.newDonation')}
                     </Link>
