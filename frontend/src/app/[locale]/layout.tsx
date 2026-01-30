@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { locales, isRtl, type Locale } from '@/i18n';
 import { Header, Footer } from '@/components/layout';
 import { CartProvider } from '@/lib/cart-context';
+import { AuthProvider } from '@/lib/auth-context';
 
 const outfit = Outfit({
     subsets: ['latin'],
@@ -74,11 +75,13 @@ export default async function RootLayout({
         <html lang={locale} dir={dir} className={outfit.variable}>
             <body className="min-h-screen bg-background font-sans antialiased flex flex-col">
                 <NextIntlClientProvider messages={messages}>
-                    <CartProvider>
-                        <Header />
-                        <main className="flex-1">{children}</main>
-                        <Footer />
-                    </CartProvider>
+                    <AuthProvider>
+                        <CartProvider>
+                            <Header />
+                            <main className="flex-1">{children}</main>
+                            <Footer />
+                        </CartProvider>
+                    </AuthProvider>
                 </NextIntlClientProvider>
             </body>
         </html>

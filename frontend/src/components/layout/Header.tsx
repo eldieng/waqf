@@ -7,6 +7,7 @@ import { usePathname, useParams } from 'next/navigation';
 import { useState } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
 import { useCart } from '@/lib/cart-context';
+import { useAuth } from '@/lib/auth-context';
 
 const navLinks = [
     { href: '/', key: 'home' },
@@ -24,6 +25,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const { itemCount } = useCart();
+    const { user, isAuthenticated, logout } = useAuth();
 
     const locale = (params.locale as string) || 'fr';
     void pathname;
@@ -82,16 +84,38 @@ export default function Header() {
                             )}
                         </Link>
 
-                        {/* Admin Login Button */}
-                        <Link
-                            href={`/${locale}/login`}
-                            className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
-                        >
-                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                            {t('login')}
-                        </Link>
+                        {/* Auth Buttons */}
+                        {isAuthenticated ? (
+                            <div className="hidden sm:flex items-center gap-2">
+                                <Link
+                                    href={`/${locale}/dashboard`}
+                                    className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                    </svg>
+                                    {user?.firstName || t('profile')}
+                                </Link>
+                                <button
+                                    onClick={logout}
+                                    className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-red-600 hover:text-red-700 hover:bg-red-50 rounded-xl transition-all"
+                                >
+                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                                    </svg>
+                                </button>
+                            </div>
+                        ) : (
+                            <Link
+                                href={`/${locale}/login`}
+                                className="hidden sm:flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-xl transition-all"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                </svg>
+                                {t('login')}
+                            </Link>
+                        )}
 
                         <Link
                             href={`/${locale}/donate`}
@@ -147,13 +171,31 @@ export default function Header() {
                                     </span>
                                 )}
                             </Link>
-                            <Link
-                                href={`/${locale}/login`}
-                                onClick={() => setIsMenuOpen(false)}
-                                className="px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium"
-                            >
-                                🔐 {t('login')}
-                            </Link>
+                            {isAuthenticated ? (
+                                <>
+                                    <Link
+                                        href={`/${locale}/dashboard`}
+                                        onClick={() => setIsMenuOpen(false)}
+                                        className="px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium"
+                                    >
+                                        👤 {user?.firstName || t('profile')}
+                                    </Link>
+                                    <button
+                                        onClick={() => { logout(); setIsMenuOpen(false); }}
+                                        className="px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl font-medium text-left"
+                                    >
+                                        🚪 {t('logout')}
+                                    </button>
+                                </>
+                            ) : (
+                                <Link
+                                    href={`/${locale}/login`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="px-4 py-3 text-gray-600 hover:bg-gray-50 rounded-xl font-medium"
+                                >
+                                    🔐 {t('login')}
+                                </Link>
+                            )}
                             <Link
                                 href={`/${locale}/donate`}
                                 onClick={() => setIsMenuOpen(false)}

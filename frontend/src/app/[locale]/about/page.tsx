@@ -392,9 +392,12 @@ export default function AboutPage() {
                                             <span className="text-slate-700">{t('transparency.tracking')}</span>
                                         </div>
                                     </div>
-                                    <button className="px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors">
-                                        {t('transparency.downloadReport')}
-                                    </button>
+                                    <Link 
+                                        href={`/${params.locale}/contact`}
+                                        className="inline-block px-6 py-3 bg-emerald-600 text-white font-semibold rounded-xl hover:bg-emerald-700 transition-colors"
+                                    >
+                                        {t('common.learnMore')}
+                                    </Link>
                                 </div>
                                 <div className="relative">
                                     <div className="bg-emerald-50 rounded-2xl p-8">

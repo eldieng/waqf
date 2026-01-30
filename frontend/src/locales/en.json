@@ -33,7 +33,8 @@
         "login": "Login",
         "register": "Sign up",
         "dashboard": "My account",
-        "logout": "Logout"
+        "logout": "Logout",
+        "profile": "My profile"
     },
     "home": {
         "hero": {

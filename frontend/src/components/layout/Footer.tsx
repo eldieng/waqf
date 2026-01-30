@@ -59,6 +59,11 @@ export default function Footer() {
                                 </li>
                             ))}
                         </ul>
+                        <div className="mt-6 space-y-2 text-sm text-gray-400">
+                            <p>📍 Liberté 6, Dakar, Sénégal</p>
+                            <p>📞 +221 77 528 13 13</p>
+                            <p>📧 contact@waqfald.com</p>
+                        </div>
                     </div>
 
                     {/* Newsletter */}

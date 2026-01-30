@@ -55,7 +55,7 @@ export default function ContactPage() {
                                 {t('contact.info.address')}
                             </h3>
                             <p className="text-neutral-600">
-                                Quartier Médina<br />
+                                Liberté 6<br />
                                 Dakar, Sénégal
                             </p>
                         </div>
@@ -65,8 +65,8 @@ export default function ContactPage() {
                             <h3 className="font-semibold text-neutral-900 mb-2">
                                 {t('contact.info.email')}
                             </h3>
-                            <a href="mailto:contact@waqf-daara.org" className="text-emerald-600 hover:underline">
-                                contact@waqf-daara.org
+                            <a href="mailto:contact@waqfald.com" className="text-emerald-600 hover:underline">
+                                contact@waqfald.com
                             </a>
                         </div>
 
@@ -75,8 +75,8 @@ export default function ContactPage() {
                             <h3 className="font-semibold text-neutral-900 mb-2">
                                 {t('contact.info.phone')}
                             </h3>
-                            <a href="tel:+221770000000" className="text-emerald-600 hover:underline">
-                                +221 77 000 00 00
+                            <a href="tel:+221775281313" className="text-emerald-600 hover:underline">
+                                +221 77 528 13 13
                             </a>
                         </div>
                     </div>
