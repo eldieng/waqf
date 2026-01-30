@@ -433,7 +433,7 @@ export default function HomePage() {
                                             </div>
                                         </div>
                                         <Link 
-                                            href={`/${locale}/donate`}
+                                            href={`/${locale}/campaigns/${campaign.slug}`}
                                             className="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-emerald-600 font-semibold rounded-xl hover:bg-slate-100 transition-colors"
                                         >
                                             {t('home.campaigns.participate')}

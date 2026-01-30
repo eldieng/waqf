@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import { contentsApi } from '@/lib/services';
+import CloudinaryUpload from '@/components/ui/CloudinaryUpload';
 
 const languages = ['fr', 'en', 'ar'];
 const contentTypeOptions = [
@@ -144,16 +145,14 @@ export default function NewContentPage() {
                                 ))}
                             </select>
                         </div>
-                        <div>
+                        <div className="md:col-span-2">
                             <label className="block text-sm font-medium text-neutral-700 mb-2">
-                                Image de couverture (URL)
+                                Image de couverture
                             </label>
-                            <input
-                                type="text"
-                                value={formData.featuredImage}
-                                onChange={(e) => setFormData({ ...formData, featuredImage: e.target.value })}
-                                placeholder="https://..."
-                                className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:border-emerald-500 outline-none"
+                            <CloudinaryUpload
+                                value={formData.featuredImage ? [formData.featuredImage] : []}
+                                onChange={(urls: string[]) => setFormData({ ...formData, featuredImage: urls[0] || '' })}
+                                maxFiles={1}
                             />
                         </div>
                         <div className="flex items-center gap-3">
